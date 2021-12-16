@@ -114,7 +114,7 @@ const data = [
     {
        skillTitle: 'Other Skills',
        skillDesc: `My acquired other skills in multi different technologies.`,
-       skillIcon:'mdi-pencil-ruler',
+       skillIcon:'mdi-xml',
        acquiredTechs:[
          {
              name:"git",
