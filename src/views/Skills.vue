@@ -2,228 +2,35 @@
   <BaseSection>
     <template #header>
       <div id="skills" class="text-h5 text-sm-h4">
-        <span style="color:#d6336a">02.</span>
+        <span style="color: #d6336a">02.</span>
         Skills
       </div>
     </template>
     <template #content>
-      <v-container>
-        <v-row>
-          <v-col cols="12" md="6" class="d-flex flex-row align-center justify-center">
-              <v-img src="../assets/icons/html-5.svg" max-width="28px"></v-img>&nbsp;
+      <v-container class="d-flex justify-center align-center flex-wrap">
+        <SkillCard v-for="skill in skills" :key="skill.skillTitle">
+          <template #card__front--content>
+            <v-icon color="#d6336a" class="my-2" size="75px">
+              {{skill.skillIcon}}
+            </v-icon>
+            <h2 class="card__title my-2">{{skill.skillTitle}}</h2>
+            <p style="color: grey my-2">
+              {{skill.skillDesc}}
+            </p>
+          </template>
+          <template #card__back--content>
+          <v-row v-for="tech in skill.acquiredTechs" :key="tech.name">
+            <v-col class="d-flex align-center justify-center">
+              <v-img :src="tech.techImage" max-width="28px"></v-img>
               <v-progress-linear
-      color="red darken-2"
-      rounded
-      value="95"
-    ></v-progress-linear>
-          </v-col>
-          <v-col cols="12" md="6" class="px-xs-0 d-flex flex-row align-center justify-center">
-            <v-img src="../assets/icons/css3.svg" max-width="28px"></v-img>&nbsp;
-              <v-progress-linear
-      color="blue darken-2"
-      rounded
-      value="90"
-    ></v-progress-linear>
-          </v-col>
-        </v-row>
-         <v-row>
-          <v-col cols="12" md="6" class="d-flex flex-row align-center justify-center">
-              <v-img src="../assets/icons/javascript.svg" max-width="28px"></v-img>&nbsp;
-              <v-progress-linear
-      color="yellow darken-2"
-      rounded
-      value="86"
-    ></v-progress-linear>
-          </v-col>
-          <v-col cols="12" md="6" class="px-xs-0 d-flex flex-row align-center justify-center">
-            <v-img src="../assets/icons/nodejs.svg" max-width="28px"></v-img>&nbsp;
-              <v-progress-linear
-      color="green darken-2"
-      rounded
-      value="70"
-    ></v-progress-linear>
-          </v-col>
-        </v-row>
-         <v-row>
-          <v-col cols="12" md="6" class="d-flex flex-row align-center justify-center">
-              <v-img src="../assets/icons/vue-js.svg" max-width="28px"></v-img>&nbsp;
-              <v-progress-linear
-      color="green darken-2"
-      rounded
-      value="40"
-    ></v-progress-linear>
-          </v-col>
-          <v-col cols="12" md="6" class="px-xs-0 d-flex flex-row align-center justify-center">
-            <v-img src="../assets/icons/python.svg" max-width="28px"></v-img>&nbsp;
-              <v-progress-linear
-      color="yellow darken-1"
-      rounded
-      value="60"
-    ></v-progress-linear>
-          </v-col>
-        </v-row>
-    <v-row>
-          <v-col cols="12" md="6" class="d-flex flex-row align-center justify-center">
-              <v-img src="../assets/icons/c-sharp.svg" max-width="28px"></v-img>&nbsp;
-              <v-progress-linear
-      color="purple darken-2"
-      rounded
-      value="90"
-    ></v-progress-linear>
-          </v-col>
-          <v-col cols="12" md="6" class="px-xs-0 d-flex flex-row align-center justify-center">
-            <v-img src="../assets/icons/angular.svg" max-width="28px"></v-img>&nbsp;
-              <v-progress-linear
-      color="red darken-2"
-      rounded
-      value="30"
-    ></v-progress-linear>
-          </v-col>
-        </v-row>
-         <v-row>
-          <v-col cols="12" md="6" class="d-flex flex-row align-center justify-center">
-              <v-img src="../assets/icons/wordpress.svg" max-width="28px"></v-img>&nbsp;
-              <v-progress-linear
-      color="blue darken-2"
-      rounded
-      value="85"
-    ></v-progress-linear>
-          </v-col>
-          <v-col cols="12" md="6" class="px-xs-0 d-flex flex-row align-center justify-center">
-            <v-img src="../assets/icons/php.svg" max-width="28px"></v-img>&nbsp;
-              <v-progress-linear
-      color="purple darken-2"
-      rounded
-      value="80"
-    ></v-progress-linear>
-          </v-col>
-        </v-row>
-    <v-row>
-          <v-col cols="12" md="6" class="d-flex flex-row align-center justify-center">
-              <v-img src="../assets/icons/flutter.svg"  max-width="28px"></v-img>&nbsp;
-              <v-progress-linear
-      color="blue darken-2"
-      rounded
-      value="70"
-    ></v-progress-linear>
-          </v-col>
-          <v-col cols="12" md="6" class="px-xs-0 d-flex flex-row align-center justify-center">
-            <v-img src="../assets/icons/dart.svg" max-width="28px"></v-img>&nbsp;
-              <v-progress-linear
-      color="blue darken-2"
-      rounded
-      value="80"
-    ></v-progress-linear>
-          </v-col>
-        </v-row>
-<v-row>
-          <v-col cols="12" md="6" class="d-flex flex-row align-center justify-center">
-              <v-img src="../assets/icons/kubernetes.svg"  max-width="28px"></v-img>&nbsp;
-              <v-progress-linear
-      color="blue darken-2"
-      rounded
-      value="20"
-    ></v-progress-linear>
-          </v-col>
-          <v-col cols="12" md="6" class="px-xs-0 d-flex flex-row align-center justify-center">
-            <v-img src="../assets/icons/docker.svg" max-width="28px"></v-img>&nbsp;
-              <v-progress-linear
-      color="blue darken-2"
-      rounded
-      value="40"
-    ></v-progress-linear>
-          </v-col>
-        </v-row>
-        <v-row>
-          <v-col cols="12" md="6" class="d-flex flex-row align-center justify-center">
-              <v-img src="../assets/icons/laravel.svg"  max-width="28px"></v-img>&nbsp;
-              <v-progress-linear
-      color="red darken-2"
-      rounded
-      value="45"
-    ></v-progress-linear>
-          </v-col>
-          <v-col cols="12" md="6" class="px-xs-0 d-flex flex-row align-center justify-center">
-            <v-img src="../assets/icons/sass.svg" max-width="28px"></v-img>&nbsp;
-              <v-progress-linear
-      color="pink"
-      rounded
-      value="68"
-    ></v-progress-linear>
-          </v-col>
-        </v-row>
-                <v-row>
-          <v-col cols="12" md="6" class="d-flex flex-row align-center justify-center">
-              <v-img src="../assets/icons/bootstrap-4.svg"  max-width="28px"></v-img>&nbsp;
-              <v-progress-linear
-      color="purple darken-2"
-      rounded
-      value="90"
-    ></v-progress-linear>
-          </v-col>
-          <v-col cols="12" md="6" class="px-xs-0 d-flex flex-row align-center justify-center">
-            <v-img src="../assets/icons/android.svg" max-width="28px"></v-img>&nbsp;
-        <v-progress-linear
-      color="green"
-      rounded
-      value="80"
-    ></v-progress-linear>
-          </v-col>
-        </v-row>
-        <v-row>
-          <v-col cols="12" md="6" class="d-flex flex-row align-center justify-center">
-              <v-img src="../assets/icons/react.svg"  max-width="28px"></v-img>&nbsp;
-              <v-progress-linear
-      color="blue"
-      rounded
-      value="30"
-    ></v-progress-linear>
-          </v-col>
-          <v-col cols="12" md="6" class="px-xs-0 d-flex flex-row align-center justify-center">
-            <v-img src="../assets/icons/firebase.svg" max-width="28px"></v-img>&nbsp;
-        <v-progress-linear
-      color="yellow darken-1"
-      rounded
-      value="67"
-    ></v-progress-linear>
-          </v-col>
-        </v-row>
-              <v-row>
-          <v-col cols="12" md="6" class="d-flex flex-row align-center justify-center">
-              <v-img src="../assets/icons/dotnet.svg"  max-width="28px"></v-img>&nbsp;
-              <v-progress-linear
-      color="blue"
-      rounded
-      value="70"
-    ></v-progress-linear>
-          </v-col>
-          <v-col cols="12" md="6" class="px-xs-0 d-flex flex-row align-center justify-center">
-            <v-img src="../assets/icons/git.svg" max-width="28px"></v-img>&nbsp;
-        <v-progress-linear
-      color="red darken-1"
-      rounded
-      value="60"
-    ></v-progress-linear>
-          </v-col>
-        </v-row>
-              <v-row>
-          <v-col cols="12" md="6" class="d-flex flex-row align-center justify-center">
-              <v-img src="../assets/icons/mysql.svg"  max-width="28px"></v-img>&nbsp;
-              <v-progress-linear
-      color="blue"
-      rounded
-      value="80"
-    ></v-progress-linear>
-          </v-col>
-          <v-col cols="12" md="6" class="px-xs-0 d-flex flex-row align-center justify-center">
-            <v-img src="../assets/icons/mongodb.svg" max-width="28px"></v-img>&nbsp;
-        <v-progress-linear
-      color="green darken-1"
-      rounded
-      value="40"
-    ></v-progress-linear>
-          </v-col>
-        </v-row>
+                :color="tech.color"
+                rounded
+                :value="tech.progress"
+              ></v-progress-linear>&nbsp;<span>{{tech.progress}}%</span>
+            </v-col>
+          </v-row>
+          </template>
+        </SkillCard>
       </v-container>
     </template>
   </BaseSection>
@@ -231,11 +38,69 @@
 
 <script>
 const BaseSection = () => import("./BaseSection.vue");
+const SkillCard = () => import("@/components/SkillCard.vue");
 export default {
   name: "Skills",
   props: {},
+  data(){
+     return{
+      skills:[
+       {
+          skillTitle: 'FRONT-END',
+          skillDesc: `My peripheral knowledge in javascript frameworks 
+              front-end skills.`,
+          skillIcon:'mdi-desktop-mac-dashboard',
+          acquiredTechs:[
+            {
+                name:"html",
+                techImage:require('@/assets/icons/html-5.svg'),
+                color:"red darken-2",
+                progress:"95",
+            },
+            {
+                name:"css",
+                techImage:require('@/assets/icons/css3.svg'),
+                color:"blue darken-2",
+                progress:"90",
+            },
+            {
+                name:"js",
+                techImage:require('@/assets/icons/javascript.svg'),
+                color:"yellow darken-2",
+                progress:"86",
+            },
+            {
+                name:"vue",
+                techImage:require('@/assets/icons/vue-js.svg'),
+                color:"green darken-2",
+                progress:"68",
+            }
+          ]
+       },
+       {
+          skillTitle: 'back-end',
+          skillDesc: ` My acquired skills on both databases and back-end within
+              many languages.`,
+          skillIcon:'mdi-database-cog',
+       },
+       {
+          skillTitle: 'Graphic design',
+          skillDesc: `My acquired knowledge in some of the adobe desgin softwares.`,
+          skillIcon:'mdi-pencil-ruler',
+       },
+      ]
+     }
+  },
   components: {
     BaseSection,
+    SkillCard,
   },
 };
 </script>
+<style scoped>
+.card__title {
+  font-size: 1.3rem;
+  transform: var(--level-three);
+  text-transform: uppercase;
+}
+</style>

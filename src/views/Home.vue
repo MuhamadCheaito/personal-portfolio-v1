@@ -51,7 +51,7 @@
                   dark
                   color="#953A7A"
                   target="_blank"
-                  :href="mailTo"
+                  @click="navigate('#contact')"
                 >
                   <v-icon class="mr-5">fa-envelope</v-icon>Get in touch
                 </v-btn>
@@ -127,6 +127,11 @@ export default {
       offset: 0,
     }
   }),
+  methods:{
+   navigate(target){
+      this.$vuetify.goTo(target, this.scrollOptions);
+    },
+  },
   components: {
     WordRotate
   },

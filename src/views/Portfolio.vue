@@ -56,7 +56,7 @@ v-on="on"
 </v-banner>
       <v-container class="d-flex justify-center align-center">
         <v-row no-gutters>
-            <v-card dark class="mx-auto my-12 d-flex flex-column justify-space-around" 
+            <v-card class="mx-auto my-12 d-flex flex-column justify-space-around" 
             max-width="374" :height="choice === 'mobile' ? 700 : '540'" light v-for="project in filteredData" 
             :key="project.name">
               <v-flex xs12>
