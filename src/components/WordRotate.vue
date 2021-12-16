@@ -11,7 +11,7 @@ export default {
     return {
       words: ["C# Developer.",
               "Full-Stack Developer.",
-              "Mobile Developer.",
+              "Problem Solver.",
               "Passionate Learner."]
     };
   },

@@ -26,7 +26,7 @@
                 <h2
                   transition="fade-transition"
                   v-if="showTitle"
-                  class="text-h4 text-sm-h3 font-weight-light mb-5 grey--text"
+                  class="text-h5 text-sm-h3 font-weight-light mb-5 grey--text"
                 >
                   I'm a <WordRotate/>
                 </h2>
@@ -45,7 +45,7 @@
               </transition>
               <transition name="slide-fade">
                 <v-btn
-                  class="mt-2 pa-6"
+                  class="mt-2 pa-6 hidden-md-and-down"
                   v-if="showBio"
                   primary
                   dark
@@ -58,11 +58,12 @@
               </transition>&nbsp;
               <transition name="slide-fade">
                 <v-btn
-                  class="mt-2 pa-6 px-7 hidden-"
+                  class="mt-2 pa-6 px-7 hidden-lg-and-up"
                   v-if="showBio"
                   primary
                   dark
                   color="#25b068"
+
                   target="_blank"
                   href='https://wa.me/qr/HW5RN4XGESM4B1'
                 >

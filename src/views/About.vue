@@ -83,8 +83,8 @@
                 <v-list-item-content>
                   <p>
                     I'm a
-                    <b>gamer</b> and an
-                    <b> language lover</b>, who loves to learn french,spanish and japanese
+                    <b>gamer</b> and I love 
+                    <b>learning languages</b> like &quot;French&quot;, &quot;Spanish&quot; and &quot;Japanese&quot;, I also love <b>reading,</b> <b>coding</b> and <b>technology</b>.
                   </p>
                 </v-list-item-content>
               </v-list-item>

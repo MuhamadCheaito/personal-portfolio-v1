@@ -121,7 +121,7 @@ const data = [{
           my knowledge and learn react.`,
     imageUrl:require('@/assets/projects/amazon-clone.png'),
     type:"web",
-    tags: 'React, JSX',
+    tags: 'React,Next,JSX',
     status:'Under Development'
   },
   {
