@@ -48,6 +48,7 @@ export default {
 
 .card:hover .card__content {
   transform: rotateY(0.5turn);
+  cursor: pointer;
 }
 
 .card__front,
