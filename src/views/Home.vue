@@ -1,9 +1,8 @@
 <template>
   <v-container
     fluid
-    style="height:100vh;position:relative;"
-    class="d-flex align-start"
-    color="primary"
+    style="height:100vh;position:relative;background-color:#222435;"
+    class="d-flex align-start body"
   >
     <v-row class="mt-5">
       <v-col cols="1">
@@ -77,12 +76,18 @@
       <v-col cols="1" align="right" justify="bottom" align-self="end"></v-col>
     </v-row>
     <div class="down-arrow" @click="$vuetify.goTo('#about', scrollOptions)">
-      <v-icon href="#about" size="50px">fa-chevron-down</v-icon>
+      <v-icon href="#about" style="cursor:pointer" size="50px">fa-chevron-down</v-icon>
     </div>
   </v-container>
 </template>
 
 <style scoped>
+.body{
+  /* margin-top:10px; */
+  /* clip-path: polygon(21% 0, 80% 0%, 100% 0, 100% 56%, 52% 100%, 52% 100%, 0 56%, 0 0); */
+  clip-path: polygon(100% 0%, 100% 100%, 52% 88%, 0 100%, 0 100%, 0 0);
+  border-radius:10px;
+}
 .down-arrow {
   position: absolute;
   bottom: 60px;
