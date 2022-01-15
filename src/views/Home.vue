@@ -1,7 +1,7 @@
 <template>
   <v-container
     fluid
-    style="height:100vh;position:relative;background-color:#222435;"
+    style="height:100vh;position:relative;"
     class="d-flex align-start body"
   >
     <v-row class="mt-5">
@@ -76,7 +76,7 @@
       <v-col cols="1" align="right" justify="bottom" align-self="end"></v-col>
     </v-row>
     <div class="down-arrow" @click="$vuetify.goTo('#about', scrollOptions)">
-      <v-icon href="#about" style="cursor:pointer" size="50px">fa-chevron-down</v-icon>
+      <v-icon href="#about" class="hidden-md-and-down black--text" style="cursor:pointer" size="50px">fa-chevron-down</v-icon>
     </div>
   </v-container>
 </template>

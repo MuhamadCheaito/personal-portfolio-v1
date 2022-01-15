@@ -1,6 +1,6 @@
 <template>
-<div>
-    <Home/>
+<div style="background-color:#222536;">
+    <Home style="background-color:white;color:black"/>
     <About/>
     <Skills />
     <Portfolio/>
@@ -8,6 +8,7 @@
 </div>
 </template>
 <style scoped>
+
 .white-text {
   color:white;
 }
