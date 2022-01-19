@@ -18,9 +18,10 @@
           :key="icon"
           dark
           icon
+          :href="icon.ref"
         >
           <v-icon size="24px"> 
-              {{ icon }}
+              {{ icon.name }}
           </v-icon>
         </v-btn>
       </v-card-text>
@@ -31,9 +32,18 @@
   export default {
     data: () => ({
       icons: [
-        'mdi-facebook',
-        'mdi-linkedin',
-        'mdi-github',
+        {
+          name:'mdi-facebook',
+          ref:'https://www.facebook.com/'
+        },
+        {
+          name:'mdi-linkedin',
+          ref:'https://www.linkedin.com/in/mohamad-cheaito-3718ab115/'
+        },
+        {
+          name:'mdi-github',
+          ref:'https://github.com/MuhamadCheaito'
+        },
       ],
     }),
   }
